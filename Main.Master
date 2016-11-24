@@ -1,0 +1,237 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="TownSquare.Web.Main" %>
+
+
+<%@ Register Src="~/UserControls/Register.ascx" TagPrefix="uc1" TagName="RegisterControl" %>
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Town Square</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta id="Meta1" name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
+  <link rel="stylesheet" type="text/css" href="/css/index.css">
+  <link rel="stylesheet" href="/js/build/mediaelementplayer.css" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+          <script type="text/javascript" src="/js/jquery.flexslider.js"></script>
+ <script src="/js/build/mediaelement-and-player.min.js"></script>   
+  <script type="text/javascript" src="/js/default.js"></script>
+     <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<%--  <script type="text/javascript" src="../js/default.js"></script>
+  --%><%--<script src="js/Validation.js"></script>--%>
+     
+       <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+ 
+      
+     <script>
+         (function (i, s, o, g, r, a, m) {
+             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                 (i[r].q = i[r].q || []).push(arguments)
+             }, i[r].l = 1 * new Date(); a = s.createElement(o),
+             m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+         ga('create', 'UA-57350756-2', 'auto');
+         ga('send', 'pageview');
+
+</script>
+     
+     
+
+ </head>
+ <body>
+     <form runat="server">
+         <asp:ScriptManager ID="ScriptManager1" runat="server">
+    
+        </asp:ScriptManager>
+  <header>
+   <div class="logo">
+    <a href="/en/index.aspx" class="logo"> <img src="/img/generic/logo.png" alt="" /> </a>
+   </div>
+   <div class="nav-right">
+    <div class="social">
+     <ul>
+      <li>
+       <a target="_blank" href="https://www.facebook.com/TownSquareDXB"> <img src="/img/generic/facebook.png" alt="" /> </a>
+      </li>
+      <li>
+       <a target="_blank" href="https://twitter.com/TownSquareDXB"> <img src="/img/generic/twitter.png" alt="" /> </a>
+      </li>
+      <li>
+       <a target="_blank" href="https://instagram.com/townsquaredxb/"> <img src="/img/generic/insta.png" alt="" /> </a>
+      </li>
+      <li>
+       <a target="_blank" href="https://www.youtube.com/channel/UCPeeuGwgaGLZA3QpRlBlS0A"> <img src="/img/generic/youtube.png" alt="" /> </a>
+      </li>
+     </ul>
+    </div>
+    <div class="register-btn">
+     <!--<a href="#"> register your interest </a>-->
+     <a href="#"> <img src="/img/generic/register-intrest-btn.jpg" alt="register your interest" /> </a>
+       
+        <uc1:RegisterControl runat="server" id="ReigsterControl"></uc1:RegisterControl>
+    </div>
+    <div class="menu-toggle">
+     <span class="menu-btn"> &nbsp; </span>
+    </div>
+   </div>
+   <div class="nav-center"> <ul>
+     <li>
+      <h6><a href="/en/yourtownsquare.aspx"> <span> your </span> town square </a></h6>
+      <ul>
+       <li>
+        <a href="/en/overview.aspx"> Overview </a>
+       </li>
+       <li>
+        <a href="/en/facts.aspx"> Facts &amp; Figures </a>
+       </li>
+       <li>
+        <a href="/en/masterplan.aspx"> Masterplan </a>
+       </li>
+        <li>
+        <a href="/en/house-warming.aspx"> Housewarming </a>
+        </li>
+        <!--
+        <li>
+        <a href="/en/main-square.aspx"> Main Square </a>
+       </li>-->
+       <li>
+        <a href="/en/yourtownsquare.aspx"> Location Map </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <h6><a href="/en/communities.aspx"> <span> your </span> community </a></h6>
+      <ul>
+          <li>
+        <a href="/en/jenna.aspx"> Jenna </a>
+       </li>
+      <li>
+        <a href="/en/zahra-breeze.aspx"> Zahra Breeze Apartments </a>
+       </li>
+       <li>
+        <a href="/en/safi-apartments.aspx"> Safi Apartments </a>
+       </li>
+       <li>
+        <a href="/en/hayat-townhouses.aspx"> Hayat Townhouses </a>
+       </li>
+       <li>
+       <a href="/en/zahra-apartments.aspx"> Zahra Apartments </a>
+       </li>
+       <li>
+        <a href="/en/zahra-townhouses.aspx"> Zahra Townhouses </a>
+       </li>
+
+      </ul>
+     </li>
+     <li>
+      <h6><a href="/en/leisure.aspx"> <span> your </span> leisure </a></h6>
+      <ul>
+       <li>
+        <a href="/en/park.aspx"> Central Park </a>
+       </li>
+       <li>
+        <a href="/en/shopping.aspx"> Shopping </a>
+       </li>
+       <li>
+        <a href="/en/reelcinema.aspx"> Reel Cinemas </a>
+       </li>
+       <li>
+        <a href="/en/vidahotel.aspx"> Vida Town Square Dubai </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <h6><a href="/en/whoweare.aspx"> who we are </a></h6>
+      <ul>
+	  
+       <li>
+        <a href="javascript:void(0);"> Profile </a>
+       </li>
+       <li>
+        <a href="javascript:void(0);"> Team </a>
+       </li>
+       <!--
+	   <li>
+        <h6> <a href="/en/mediacenter.aspx"> Media Centre </a> </h6>
+       </li>-->
+       <li> 
+      </ul>
+     </li>
+     <li>
+      <h6><a href="/en/contactus.aspx"> contact us </a></h6>
+      <ul>
+       <!--
+	  <li>
+		<a href="javascript:void(0);"> Agents </a>
+       </li>-->
+       <li>
+		<a href="javascript:void(0);"> Contact Information </a>
+       </li>
+       <li>
+        <a href="javascript:void(0);"> Sales Centre Location </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </div>
+  </header>
+  <div class="main-wrapper">
+ 
+       <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+   <footer>
+    <div class="center">
+     <div class="nav">
+      <ul>
+       <li>
+        <a href="/en/yourtownsquare.aspx"> your town square </a>
+       </li>
+       <li>
+        <a href="/en/whoweare.aspx"> WHO WE ARE </a>
+       </li>
+       <li>
+        <a href="/en/communities.aspx"> YOUR COMMUNITIES </a>
+       </li>
+       <li>
+        <a href="/en/contactus.aspx"> Contact us </a>
+       </li>
+       <li>
+        <a href="/en/leisure.aspx"> YOUR LEISURE </a>
+       </li>
+       <%--<li>
+        <a href="/en/mediacenter.aspx"> media centre </a>
+       </li>--%>
+      </ul>
+     </div>
+     <div class="footer-logo">
+      <a href="http://www.nshama.ae"> <img src="/img/generic/nshama-logo.png" alt="" /> </a>
+     </div>
+     <div class="pp">
+      <p>
+       <a href="/en/privacy.aspx"> Privacy Policy </a>
+      </p>
+      <p>
+       <a href="/en/terms.aspx"> Terms &amp; Conditions </a>
+      </p>
+     </div>
+     <div class="copyright">
+      Copyrights &copy; 2015. All Rights Reserved
+     </div>
+    </div>
+   </footer>
+  </div>
+         </form>
+     
+
+ </body>
+         
+
+
+
+</html>
